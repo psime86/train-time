@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -51,27 +53,27 @@
         <form style="padding: 20px;">
             <div class="form-group">
                 <label for="TrainNameInput">Train Name</label>
-                <input type="email" class="form-control" id="TrainNameInput">
+                <input type="text" class="form-control" id="TrainNameInput">
             </div>
 
             <div class="form-group">
                 <label for="DestinationInput">Destination</label>
-                <input type="password" class="form-control" id="DestinationInput">
+                <input type="text" class="form-control" id="DestinationInput">
             </div>
 
             <div class="form-group">
                 <label for="FirstTrainTimeInput">First Train Time (HH:mm - Military Time)</label>
-                <input type="email" class="form-control" id="FirstTrainTimeInput">
+                <input type="text" class="form-control" id="FirstTrainTimeInput">
             </div>
     
             <div class="form-group">
                 <label for="FrequencyInput">Frequency (min)</label>
-                <input type="password" class="form-control" id="FrequencyInput">
+                <input type="text" class="form-control" id="FrequencyInput">
             </div>
                 
 
                 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         </form>
 
     </div>
