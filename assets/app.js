@@ -69,13 +69,13 @@ database.ref().on("child_added", function(childSnapshot){
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
 
     // Time apart (remainder)
-    var remainder = diffTime % frequencyInput;
+    var remainder = Math.abs(diffTime % frequencyInput);
 
     // Minute Until Train
     var minutesUntilTrain = frequencyInput - remainder;
-
+    console.log(minutesUntilTrain);
     // Next Train
-    var nextArrival = moment().add(minutesUntilTrain, "minutes").format("HH:mm");
+    var nextArrival = moment(currentTime).add(minutesUntilTrain, "minutes").format("HH:mm");
 
     // Append to new row in HTML
     var newRow = $("<tr>").append(
